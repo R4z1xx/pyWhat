@@ -26,7 +26,8 @@ def cleanhtml(raw_html):
 
 
 r = requests.get(
-    "https://en.wikipedia.org/w/index.php?title=" + "List_of_file_signatures&action=raw"
+    "https://en.wikipedia.org/w/index.php?title=" + "List_of_file_signatures&action=raw",
+    timeout=30
 )
 wt = wtp.parse(r.text)
 # prints first 3 items of json, delete [0:3] to print all.

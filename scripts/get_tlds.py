@@ -2,7 +2,7 @@ import re
 
 import requests
 
-tlds = requests.get("https://data.iana.org/TLD/tlds-alpha-by-domain.txt")
+tlds = requests.get("https://data.iana.org/TLD/tlds-alpha-by-domain.txt", timeout=30)
 final_string = "|".join(sorted(tlds.text.split("\n")[1:-1], key=len, reverse=True))
 
 

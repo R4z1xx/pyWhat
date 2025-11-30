@@ -64,8 +64,10 @@ class Identifier:
                     short_name = os.path.basename(string)
 
                 magic_numbers = pywhat.magic_numbers.get_magic_nums(string)
+                # Limit file read to 100MB to prevent memory exhaustion
+                max_file_size = 100 * 1024 * 1024
                 with open(string, "r", encoding="utf-8", errors="ignore") as file:
-                    contents = [file.read()]
+                    contents = [file.read(max_file_size)]
 
                 if include_filenames:
                     contents.append(os.path.basename(string))
