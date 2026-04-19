@@ -14,7 +14,7 @@ rich = ">=11.0.0"
 orjson = {version = "^3.9.15", optional = true}
 
 [tool.poetry.dev-dependencies]
-pytest = "^7.0"
+pytest = "^9.0"
 black = "^26.3.1"
 isort = "^5.9.3"
 flake8 = "^4.0"
