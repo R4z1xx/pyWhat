@@ -27,7 +27,7 @@ types-requests = "^2.25.9"
 types-orjson = "^3.6.0"
 urllib3 = ">=2.7.0"
 zipp = ">=3.19.1"
-Pygments = ">=2.15.0"
+Pygments = ">=2.20.0"
 
 [tool.poetry.extras]
 optimize = ["orjson"]
